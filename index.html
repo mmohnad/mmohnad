@@ -4,10 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>FingerprintJS Demo</title>
+    <title>FingerprintJS</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico?e3f73b3427329bc781d8cc93644405dd"/>
     <style>
-        /* The full-height solution for IE 11 is taken from https://gist.github.com/palicko/26b327cd2198e52c25b13485b4dd02bc */
         html, body {
             display: flex;
             justify-content: center;
@@ -24,20 +23,24 @@
         }
         .content {
             width: 100%;
-            max-width: 60em;
+            max-width: 30em; /* Smaller maximum width */
+            max-height: 40vh; /* Smaller maximum height */
             box-sizing: border-box;
             padding: 1.25em;
             display: flex;
             flex-direction: column;
             align-items: center;
             color: #fff;
+            background-color: #111; /* Dark background to define the content area */
+            border-radius: 0.7em;
+            box-shadow: 0 0 1.25em rgba(255, 255, 255, 0.2);
         }
         header {
             flex: none;
             margin-bottom: 1.2vh;
         }
         header img {
-            height: 5vh;
+            height: 4vh;
             max-width: 100%;
         }
         button {
@@ -51,7 +54,7 @@
             border-radius: 0.57em;
             cursor: pointer;
             margin: 0;
-            padding: 0.85em 1.7em;
+            padding: 0.5em 1.2em; /* Smaller padding for buttons */
             text-align: center;
             outline: none;
             transition: background 0.25s ease-out;
@@ -71,21 +74,20 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.8em;
+            gap: 0.5em; /* Smaller gap between buttons */
         }
         .outputHolder {
             flex: 1;
             width: 100%;
             position: relative;
-            max-width: 40em;
+            max-width: 25em; /* Smaller output area */
         }
         .output {
             width: 100%;
             box-sizing: border-box;
             background: #222;
-            box-shadow: 0 0 1.25em rgba(255, 255, 255, 0.2);
             border-radius: 0.7em;
-            padding: 1em 1.25em;
+            padding: 0.75em 1em; /* Smaller padding for the output area */
             color: #e1e5ea;
             overflow: auto;
         }
@@ -98,36 +100,14 @@
             word-break: break-all;
             color: #fff;
         }
-        .output pre.big {
-            font-size: 123%;
-        }
-        .output pre.giant {
-            font-size: 200%;
-        }
         .output .heading {
             font-size: 81%;
             margin-bottom: 0.5em;
             color: #ccc;
         }
-        .output .heading:not(:first-child) {
-            margin-top: 2em;
-        }
-        .output .comment {
-            font-size: 87%;
-            margin-top: 0.6em;
-            color: #a3a7ad;
-        }
-        .output a {
-            color: inherit;
-            text-decoration: dotted underline;
-        }
-        .output a:hover {
-            color: inherit;
-            text-decoration: underline;
-        }
         footer {
             text-align: center;
-            margin-top: 2em;
+            margin-top: 1em;
             font-size: 80%;
             color: #666;
         }
@@ -135,6 +115,7 @@
         @media (max-width: 768px), (max-height: 568px) {
             .content {
                 padding: 1em;
+                max-width: 90%; /* Adjust max-width for smaller screens */
             }
             button {
                 padding: 0.7em 1em;
@@ -148,7 +129,7 @@
 </head>
 <body>
 <div class="content">
-    <header><a href="https://github.com/fingerprintjs/fingerprintjs"><img src="assets/logo_dark.svg?54e0f0c935e49f84ea15fec7098d7361" alt="FingerprintJS logo"></a></header>
+    <header><a href="https://st2.depositphotos.com/2065849/5208/i/450/depositphotos_52084573-stock-photo-fingerprints-on-black.jpg"><img src="https://st2.depositphotos.com/2065849/5208/i/450/depositphotos_52084573-stock-photo-fingerprints-on-black.jpg" alt="FingerprintJS"></a></header>
     <div class="buttons">
         <button disabled="disabled" id="debugCopy">Copy Debug Data</button>
         <button disabled="disabled" id="debugShare">Share Debug Data</button>
@@ -159,6 +140,6 @@
         </section>
     </div>
 </div>
-<footer>© 2024 mohnad+fingerprint</footer>
+<footer>© 2024 Fingerprint</footer>
 </body>
 </html>
