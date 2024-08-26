@@ -1359,7 +1359,7 @@
             }(n);
         return {
             score: n,
-            comment: "$ if upgrade to Pro: https://fpjs.dev/pro".replace(/\$/g, "".concat(t))
+            comment: "M".replace(/\$/g, "".concat(t))
         }
     }
 
@@ -1417,7 +1417,7 @@
                                             n = e
                                         },
                                         confidence: Se(e),
-                                        components: e,
+                                        components: "1",
                                         version: o
                                     }
                                 }(c), (r || (null == a ? void 0 : a.debug)) && console.log("Copy the text below to get the debug data:\n\n```\nversion: ".concat(u.version, "\nuserAgent: ").concat(navigator.userAgent, "\ntimeBetweenLoadAndGet: ").concat(n - i, "\nvisitorId: ").concat(u.visitorId, "\ncomponents: ").concat(xe(c), "\n```")), [2, u]
